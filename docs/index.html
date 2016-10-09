@@ -1,580 +1,621 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title> Slider 2.0</title>
-		
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
-		<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-		
-		<meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, minimum-scale=1, maximum-scale=1">	
-		<meta charset="utf-8">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="js/slider2.0.min.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-			eaeGlobalSettings.descPadding = 10;
-			eaeGlobalSettings.changeDelay = 4500;
-			eaeGlobalSettings.ctrlLeftUrl = 'img/icons/aleft.png';
-			eaeGlobalSettings.ctrlRightUrl= 'img/icons/aright.png';
-			$(function() {
-			  $('a[href*=#]:not([href=#])').click(function() {
-			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			      var target = $(this.hash);
-			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			      if (target.length) {
-			        $('html,body').animate({
-			          scrollTop: target.offset().top
-			        }, 1000);
-			        return false;
-			      }
-			    }
-			  });
+<head>
+	<title> Slider 2.0</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/slider2.0.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		eaeGlobalSettings.descPadding = 10;
+		eaeGlobalSettings.changeDelay = 4500;
+		eaeGlobalSettings.ctrlLeftUrl = 'img/icons/aleft.png';
+		eaeGlobalSettings.ctrlRightUrl = 'img/icons/aright.png';
+		$(function () {
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
 			});
-		</script>
-		
-		<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
-		<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="img/favicon/manifest.json">
-		<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#55c34d">
-		<link rel="shortcut icon" href="img/favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
-		<meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
-	</head>
+		});
+	</script>
 
-	<body class="bg--lblue">
-		
-		<div class="headerDiv">
-			<div class="headerContent">
-				<img src="img/logo/slider2.0_logo.png"/>
-				<a href="#welcome"><div class="goDown animated bounce"></div></a>	
-			</div>
-		</div>
-		
-		<div class="eaeSlider" eae-settings="changeDuration:500;changeDelay:8000" id="headingSlider">
-			<img src="img/heading/headerSlide1.jpg" />
-			<img src="img/heading/headerSlide2.jpg" />
-			<img src="img/heading/headerSlide3.jpg" />
-			<img src="img/heading/headerSlide4.jpg" />
-			<img src="img/heading/headerSlide5.jpg" />
-		</div>
-		
-		<div id="welcome" class="section">
-		
-			<div class="wrapper">
-			
-			
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/favicon/manifest.json">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#55c34d">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
 
-				<div class="grid grid-3-3">
-					<h1 class="fw-normal fs--xxxlarge ta-center fc--dblue2">Slider2.0</h1>
-					<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
-						<br/>
-						easy <span class="fc--green">.</span>
-						fast <span class="fc--green">.</span>
-						light <span class="fc--green">.</span>
-						responsive
-					</h2>
-				</div>
-				
-				<div class="sec-100 flex-center">
-					<div class="grid grid-1-3">
-						<img class="inline-logo" src="img/logo/slider2.0_logo_crop.png"/>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						So, welcome back to another chapter of easy and elegant sliding. It has been I while since we released the SuperSimpleSlider and
-						there has been a lot going on. We are proud to present to you today the brand new <span class="fc--green fw-bold">Slider2.0</span>. It is packed with some nice additions and improvements like <span class="fc--green fw-bold">fade transition</span>, a <span class="fc--green fw-bold">description feature</span> and the option to put a link on each slide. <br/>BUT don't be afraid, of course we kept the <span class="fc--green fw-bold">simplicity</span> and all the other conveniences from the so loved SuperSimpleSlider. Besides the changes in the front end a lot changed under the hood. We <span class="fc--green fw-bold">improved the performance</span> and by directly inserting a custom jQuery Mobile script we saved you a lot of work and unnecessary pageload.
-					</div>
-					<div style="clear: both;"></div>
-	
-				</div>
-			
-			</div>
-			
-		</div>
-			
-		<div id="setup" class="section">
-			
-			<div class="wrapper">
+<body class="bg--lblue">
 
-				<div class="grid grid-3-3">
-					<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
-						the setup
-					</h2>
-				</div>
-				
-				<div class="sec-100 flex-center setup-line flex-reverse">
-					<div class="grid grid-1-3">
-						<p class="fs--mxlarge ta-center">1</p>
-					</div>
-					
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						Download the Slider2.0.min.js from the <a href="#download">download</a> section an include it right after the jQuery import:
-						<br/><br/>
-						
-						<div class="coderDiv ta-left no-wrap">
-							
-							&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;&lt;/script&gt;&nbsp;&nbsp;
-							<br/>
-							&lt;script src="js/slider2.0.min.js"&gt;&lt;/script&gt;
-						</div> 
-					</div>
-					
-					<div style="clear: both;"></div>
-				</div>
-				
-				<div class="sec-100 flex-center setup-line">
-					<div class="grid grid-1-3">
-						<p class="fs--mxlarge ta-center">2</p>
-					</div>
-					
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						Next step: Simply build a div with the eae-slider class, to style it via CSS you should set an id too:
-						<br/><br/>
-						
-						<div class="coderDiv ta-left no-wrap">
-							&lt;div class="eaeSlider" id="mainSlider"&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage1.jpg" /&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage2.jpg" /&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage3.jpg" /&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage4.jpg" /&gt;<br/>
-							&lt;/div&gt;
-						</div> 
-					</div>
-					
-					<div style="clear: both;"></div>
-				</div>
-				
-				<div class="sec-100 flex-center setup-line flex-reverse">
-					<div class="grid grid-1-3">
-						<p class="fs--mxlarge ta-center">3</p>
-					</div>
-					
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						From here you are good to go. But, there's a lot more to setup if you want. The Slider2.0 has a description and a link function.
-						Just add a <span class="ff-code">eae-link=""</span> or <span class="ff-code">eae-desc=""</span> attribute to the 
-						<span class="ff-code">&lt;img/&gt;</span> tag:
-						<br/><br/>
-						<div class="coderDiv ta-left no-wrap">
-								&lt;img src="img/sampleImage1.jpg" eae-link="http://saveandclose.de" /&gt;<br/>
-								&lt;img src="img/sampleImage1.jpg" eae-desc="This is a description!" /&gt;<br/>
-						</div> 
-					</div>
-					
-					<div style="clear: both;"></div>
-				</div>
-			
-			</div>
-			
-		</div>
-		
-		<div id="default" class="section">
-		
-			<div class="wrapper">
-			
-				<div class="grid grid-3-3">
-					<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
-						default settings
-					</h2>
-				</div>
-				<div class="spacer--50"></div>
-				
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">changeDuration: 500</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						changes the transition speed, accepts numbers in ms
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">changeDelay: 0</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						changes the delay for the auto-slide function, accepts number in ms, 0 is off
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">changeMode: 'slide'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						changes slide mode, acccepts 'slide' or 'fade'
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">imageCrop: 'cover'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines the image-crop for the slider, accepts all standard css values for background-size (e.g. 'cover', 'contain')
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">imagePos: 'center center'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines the image position, accepts all standard css values for background-position
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">descColor: '#696969'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines font color for image description, accepts all standard css color values
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">descFontSize: '20px'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines font size for image description, accepts all standard css font-size values
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">descWidth:'100%'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines the width of the description bar, accepts all standard css width values, considers descPadding setting, if set to '' it is set to auto 
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">descPadding: 20</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines the padding fotr the desciption, accepts only numeric input
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">enableCtrl: 'false'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines wether the controls are visible or not, accepts 'true' or 'false'
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">ctrlColor: ''</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						changes the back color of the controls and the description, accepts all standard css color values
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">ctrlWidth: '50px'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						changes the width of the controls, accepts all standard css width values
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">ctrlHeight: '100%'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						changes the height of the controls, accepts all standard css height values
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">ctrlLeftUrl: ''</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines the path for the background image of the left control (e.g. 'img/icons/arrow_left')
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">ctrlRightUrl: ''</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines the path for the background image of the right control (e.g. 'img/icons/right')
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">enableTouch: true</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines wether touch is enabled or not, accepts 'true' or 'false'
-					</div>
-				</div>
-				<div class="sec-100-smallgrid flex-center">
-					<div class="grid grid-1-3">
-						<span class="ff-code">bgColor: 'transparent'</span>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						defines the slider background color, visible e.g. if imageCrop is set to 'contain', accepts all standard css color values
-					</div>
-				</div>
-				<div class="spacer--50"></div>
-				
-			</div>
-		</div>
-		
-		<div id="changesettings" class="section">
-				
-			<div class="wrapper">
-				<div class="grid grid-3-3">
-					<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
-						change settings
-					</h2>
-				</div>
-				
-				<div class="sec-100 flex-center">
-					<div class="grid grid-1-3">
-						<img class="inline-logo" src="img/icons/global_settings.png"/>
-					</div>
+<div class="headerDiv">
+	<div class="headerContent">
+		<img src="img/logo/slider2.0_logo.png"/>
+		<a href="#welcome">
+			<div class="goDown animated bounce"></div>
+		</a>
+	</div>
+</div>
 
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						<span class="fc--green fw-bold">First, you can change these default settings globally.</span>
-						To do so you just add a <span class="ff--code">&lt;script&gt;&lt;/script&gt;</span>
-						tag after the Slider2.0 import and access the <span class="ff-code">eaeGlobalSettings</span> object to perform your changes:
-						
-						<br/><br/>
-						<div class="coderDiv ta-left no-wrap">
-							&lt;script&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;eaeGlobalSettings.changeDuration = 400;	<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;eaeGlobalSettings.changeDelay = 8000;	<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;eaeGlobalSettings.enableCtrl = 'true';	<br/>
-							&lt;/script&gt;
-						</div>
-						<br/>
-						<span class="fc--green fw-bold">IMPORTANT:</span> while changing settings globally keep in mind that you are using JS, so everything,
-						except numeric values, HAS TO BE IN QUOTES!
-					</div>
-					<div style="clear: both;"></div>
-				</div>
-				
-				<div class="sec-100 flex-center flex-reverse">
-					<div class="grid grid-1-3">
-						<img class="inline-logo" src="img/icons/unique_settings2.png"/>
-					</div>
+<div class="eaeSlider" eae-settings="changeDuration:500;changeDelay:8000" id="headingSlider">
+	<img src="img/heading/headerSlide1.jpg"/>
+	<img src="img/heading/headerSlide2.jpg"/>
+	<img src="img/heading/headerSlide3.jpg"/>
+	<img src="img/heading/headerSlide4.jpg"/>
+	<img src="img/heading/headerSlide5.jpg"/>
+</div>
 
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						<span class="fc--green fw-bold">Second, you can change the settings individually for each slider.</span>
-						In this case you add the <span class="ff-code">eae-settings=""</span> attribute to the <span class="ff-code">eaeSlider</span> div.
-						Seperate multiple statements with a semicolon.
-						<br/><br/>
-						<div class="coderDiv ta-left no-wrap">
-							&lt;div class="eaeSlider" eae-settings="enableTouch:false;changeDelay:8000"&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage1.jpg" /&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage2.jpg" /&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage3.jpg" /&gt;<br/>
-							&lt;/div&gt;
-						</div>
-						<br/>
-						<span class="fc--green fw-bold">IMPORTANT:</span> while changing settings individually make sure to AVOID USING QUOTES in any way!
-					</div>
-					<div style="clear: both;"></div>
-				</div>
-			</div>
-			
-		</div>
-		
-		<div id="examples" class="section">
-		
-			<div class="wrapper">
-			
-				<div class="grid grid-3-3">
-					<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
-						examples
-					</h2>
-				</div>
-				
-				<div class="sec-100 flex-end">
-					<div class="grid grid-1-3">
-						<div class="coderDiv ta-left no-wrap">
-							ctrlColor: rgba(5, 53, 66, 0.25);<br/>
-							descColor: #55C34D;<br/>
-							descFontSize:16px;<br/>
-							descPadding: 10;
-						</div>
-						<br/><br/>
-						<div class="eaeSlider example-slider"  eae-settings="descColor:#55C34D;ctrlColor:rgba(5, 53, 66, 0.75)">
-							<img src="img/samples/1-1.jpeg" eae-desc="First Image." />
-							<img src="img/samples/1-2.jpeg" eae-desc="Second Image." />
-							<img src="img/samples/1-3.jpeg" eae-desc="Third Image." />
-							<img src="img/samples/1-4.jpeg" eae-desc="Fourth Image." />
-						</div>
-						
-					</div>
-					<div class="grid grid-1-3 mo--hide">
-						<div class="coderDiv ta-left no-wrap">
-							changeDelay:0;<br/>
-							ctrlColor:rgba(255,255,255,0.75);<br/>
-							ctrlHeight:70px;<br/>
-							enableCtrl:true;
-						</div>
-						<br/><br/>
-						<div class="eaeSlider example-slider"  eae-settings="changeDelay:0;enableCtrl:true;ctrlHeight:70px;ctrlColor:rgba(255,255,255,0.75)">
-							<img src="img/samples/2-1.jpeg" />
-							<img src="img/samples/2-2.jpeg" />
-							<img src="img/samples/2-3.jpeg" />
-							<img src="img/samples/2-4.jpeg" />
-						</div>
-						
-					</div>
-					<div class="grid grid-1-3 mo--hide">
-						<div class="coderDiv ta-left no-wrap">
-							changeDelay: 8000;<br/>
-							changeDuration: 1000;<br/>
-							changeMode: fade;<br/>
-							imagePos: bottom left;
-						</div>
-						<br/><br/>
-						<div class="eaeSlider example-slider"  eae-settings="imagePos: bottom left;changeDelay:8000;changeMode:fade;changeDuration:1000">
-							<img src="img/samples/3-1.jpeg" />
-							<img src="img/samples/3-2.jpeg" />
-							<img src="img/samples/3-3.jpeg" />
-							<img src="img/samples/3-4.jpeg" />
-						</div>
-						
-					</div>
-					<div style="clear: both;"></div>
-				</div>
-				
-				
-				<div class="sec-100 flex-end">
-					<div class="grid grid-1-3 mo--hide">
-						<div class="coderDiv ta-left no-wrap">
-							changeDelay: 6500;<br/>
-							changeDuration: 1200;<br/>
-							changeMode: fade;<br/>
-							enableTouch: false;
-						</div>
-						<br/><br/>
-						<div class="eaeSlider example-slider"  eae-settings="changeMode:fade;enableTouch:false;ctrlColor:rgba(255,255,255,0.75);changeDelay:6500;changeDuration:1200">
-							<img src="img/samples/4-1.jpeg" />
-							<img src="img/samples/4-2.jpeg" />
-							<img src="img/samples/4-3.jpeg" />
-							<img src="img/samples/4-4.jpeg" />
-						</div>
-						
-					</div>
-					<div class="grid grid-1-3">
-						<div class="coderDiv ta-left no-wrap">
-							bgColor: rgba(5, 53, 66, 0.25);<br/>
-							changeDelay: 12000;<br/>
-							changeMode: fade;<br/>
-							imageCrop: contain;
-						</div>
-						<br/><br/>
-						<div class="eaeSlider example-slider"  eae-settings="imageCrop:contain;bgColor:rgba(5, 53, 66, 0.25);changeMode:fade;changeDelay:12000;enableTouch:false">
-							<img src="img/samples/5-1.jpeg" />
-							<img src="img/samples/5-2.jpeg" />
-							<img src="img/samples/5-3.jpeg" />
-							<img src="img/samples/5-4.jpeg" />
-						</div>
-						
-					</div>
-					<div class="grid grid-1-3 mo--border-none">
-						<div class="coderDiv ta-left no-wrap">
-							changeDuration: 2000;<br/>
-							ctrlLeftUrl: img/icons/arrow-l.png;<br/>
-							ctrlRightUrl: img/icons/arrow-r.png;<br/>
-							enableCtrl: true;
-						</div>
-						<br/><br/>
-						<div class="eaeSlider example-slider"  eae-settings="changeDuration:2000;enableCtrl:true;ctrlLeftUrl:img/icons/alw.png;ctrlRightUrl:img/icons/arw.png">
-							<img src="img/samples/6-1.jpeg" />
-							<img src="img/samples/6-2.jpeg" />
-							<img src="img/samples/6-3.jpeg" />
-							<img src="img/samples/6-4.jpeg" />
-						</div>
-						
-					</div>
-					<div style="clear: both;"></div>
-				</div>
-			
-			</div>
-			
+<div id="welcome" class="section">
+
+	<div class="wrapper">
+
+
+		<div class="grid grid-3-3">
+			<h1 class="fw-normal fs--xxxlarge ta-center fc--dblue2">Slider2.0</h1>
+			<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
+				<br/>
+				easy <span class="fc--green">.</span>
+				fast <span class="fc--green">.</span>
+				light <span class="fc--green">.</span>
+				responsive
+			</h2>
 		</div>
 
-		<div id="download" class="section">
-		
-			<div class="wrapper">
-			
-				<div class="grid grid-3-3">
-					<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
-						download
-					</h2>
-				</div>
-							
-				<div class="sec-100 flex-center">
-					<div class="grid grid-1-3">
-						<a href="download/slider2.0.zip"><img class="inline-logo" src="img/icons/unique_settings.png"/></a>
-					</div>
-					<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
-						I'm happy you made it to the download section. Just a few last things to mention...of course Slider2.0 is free to use both, non- and
-						commercial purposes. Nevertheless I put a lot of work and passion into making this fully responsive, easy to use and minimalistic script. 
-						So if you're going to use it just Tweet me <a target="_blank" href="https://twitter.com/theFaxemaxe">@theFaxemaxe</a>.
-						<br/>
-						I would really appreciate a small donation, so pay what you want and leave a short message.
-						<br/>
-						<p class="lh--60 ta-center fs--large"><a target="_blank" href="https://paypal.me/maxhoeffner/2.4">donate now via paypal</a></p>
-						Allright, thank you for your time and have fun.
-						<br/>
-						<p class="lh--60 ta-center fs--large"><a href="download/slider2.0.zip">download script</a></p>
-					</div>  
-					
-					<div style="clear: both;"></div>
-	
-				</div>
-			
+		<div class="sec-100 flex-center">
+			<div class="grid grid-1-3">
+				<img class="inline-logo" src="img/logo/slider2.0_logo_crop.png"/>
 			</div>
-			
-		</div>
-		
-		<div id="footer" class="section bg--green">
-			<div class="wrapper">
-				<div class="grid grid-3-3 ta-center lh--30">
-					
-						<p>
-							<a href="https://saveandclose.io/impressum.html" target="_blank">Imprint</a>
-							 | 
-							<a href="https://saveandclose.io/privacypolicy.html" target="_blank">Privacy Policy</a>
-						</p>
-						
-						<br/>
-					
-						<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-							<img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-						</a>
-						<br />
-						<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Slider2.0</span>
-						von
-						<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Max Höffner</span>
-						ist lizenziert unter einer<br/>
-						<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
-				</div>
-			</div>
-		</div>
-		
-		
-	</body>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				So, welcome back to another chapter of easy and elegant sliding. It has been I while since we released
+				the SuperSimpleSlider and
+				there has been a lot going on. We are proud to present to you today the brand new <span
+					class="fc--green fw-bold">Slider2.0</span>. It is packed with some nice additions and improvements
+				like <span class="fc--green fw-bold">fade transition</span>, a <span class="fc--green fw-bold">description feature</span>
+				and the option to put a link on each slide. <br/>BUT don't be afraid, of course we kept the <span
+					class="fc--green fw-bold">simplicity</span> and all the other conveniences from the so loved
+				SuperSimpleSlider. Besides the changes in the front end a lot changed under the hood. We <span
+					class="fc--green fw-bold">improved the performance</span> and by directly inserting a custom jQuery
+				Mobile script we saved you a lot of work and unnecessary pageload.
+				<br><br>
+				<p class="ta-center fs--large">
+					<a href="#download" style="font-weight: 300;">
+						TL;DR
+					</a>
+				</p>
 
-	<footer></footer>
+			</div>
+			<div style="clear: both;"></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div id="setup" class="section">
+
+	<div class="wrapper">
+
+		<div class="grid grid-3-3">
+			<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
+				the setup
+			</h2>
+		</div>
+
+		<div class="sec-100 flex-center setup-line flex-reverse">
+			<div class="grid grid-1-3">
+				<p class="fs--mxlarge ta-center">1</p>
+			</div>
+
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				Download the Slider2.0.min.js from the <a href="#download">download</a> section an include it right
+				after the jQuery import:
+				<br/><br/>
+
+				<div class="coderDiv ta-left no-wrap">
+
+					&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;&lt;/script&gt;&nbsp;&nbsp;
+					<br/>
+					&lt;script src="js/slider2.0.min.js"&gt;&lt;/script&gt;
+				</div>
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+
+		<div class="sec-100 flex-center setup-line">
+			<div class="grid grid-1-3">
+				<p class="fs--mxlarge ta-center">2</p>
+			</div>
+
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				Next step: Simply build a div with the eae-slider class, to style it via CSS you should set an id too:
+				<br/><br/>
+
+				<div class="coderDiv ta-left no-wrap">
+					&lt;div class="eaeSlider" id="mainSlider"&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage1.jpg" /&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage2.jpg" /&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage3.jpg" /&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage4.jpg" /&gt;<br/>
+					&lt;/div&gt;
+				</div>
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+
+		<div class="sec-100 flex-center setup-line flex-reverse">
+			<div class="grid grid-1-3">
+				<p class="fs--mxlarge ta-center">3</p>
+			</div>
+
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				From here you are good to go. But, there's a lot more to setup if you want. The Slider2.0 has a
+				description and a link function.
+				Just add a <span class="ff-code">eae-link=""</span> or <span class="ff-code">eae-desc=""</span>
+				attribute to the
+				<span class="ff-code">&lt;img/&gt;</span> tag:
+				<br/><br/>
+				<div class="coderDiv ta-left no-wrap">
+					&lt;img src="img/sampleImage1.jpg" eae-link="http://saveandclose.de" /&gt;<br/>
+					&lt;img src="img/sampleImage1.jpg" eae-desc="This is a description!" /&gt;<br/>
+				</div>
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+
+	</div>
+
+</div>
+
+<div id="default" class="section">
+
+	<div class="wrapper">
+
+		<div class="grid grid-3-3">
+			<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
+				default settings
+			</h2>
+		</div>
+		<div class="spacer--50"></div>
+
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">changeDuration: 500</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				changes the transition speed, accepts numbers in ms
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">changeDelay: 0</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				changes the delay for the auto-slide function, accepts number in ms, 0 is off
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">changeMode: 'slide'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				changes slide mode, acccepts 'slide' or 'fade'
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">imageCrop: 'cover'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines the image-crop for the slider, accepts all standard css values for background-size (e.g.
+				'cover', 'contain')
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">imagePos: 'center center'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines the image position, accepts all standard css values for background-position
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">descColor: '#696969'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines font color for image description, accepts all standard css color values
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">descFontSize: '20px'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines font size for image description, accepts all standard css font-size values
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">descWidth:'100%'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines the width of the description bar, accepts all standard css width values, considers descPadding
+				setting, if set to '' it is set to auto
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">descPadding: 20</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines the padding fotr the desciption, accepts only numeric input
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">enableCtrl: 'false'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines wether the controls are visible or not, accepts 'true' or 'false'
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">ctrlColor: ''</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				changes the back color of the controls and the description, accepts all standard css color values
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">ctrlWidth: '50px'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				changes the width of the controls, accepts all standard css width values
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">ctrlHeight: '100%'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				changes the height of the controls, accepts all standard css height values
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">ctrlLeftUrl: ''</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines the path for the background image of the left control (e.g. 'img/icons/arrow_left')
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">ctrlRightUrl: ''</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines the path for the background image of the right control (e.g. 'img/icons/right')
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">enableTouch: true</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines wether touch is enabled or not, accepts 'true' or 'false'
+			</div>
+		</div>
+		<div class="sec-100-smallgrid flex-center">
+			<div class="grid grid-1-3">
+				<span class="ff-code">bgColor: 'transparent'</span>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				defines the slider background color, visible e.g. if imageCrop is set to 'contain', accepts all standard
+				css color values
+			</div>
+		</div>
+		<div class="spacer--50"></div>
+
+	</div>
+</div>
+
+<div id="changesettings" class="section">
+
+	<div class="wrapper">
+		<div class="grid grid-3-3">
+			<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
+				change settings
+			</h2>
+		</div>
+
+		<div class="sec-100 flex-center">
+			<div class="grid grid-1-3">
+				<img class="inline-logo" src="img/icons/global_settings.png"/>
+			</div>
+
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				<span class="fc--green fw-bold">First, you can change these default settings globally.</span>
+				To do so you just add a <span class="ff--code">&lt;script&gt;&lt;/script&gt;</span>
+				tag after the Slider2.0 import and access the <span class="ff-code">eaeGlobalSettings</span> object to
+				perform your changes:
+
+				<br/><br/>
+				<div class="coderDiv ta-left no-wrap">
+					&lt;script&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;eaeGlobalSettings.changeDuration = 400; <br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;eaeGlobalSettings.changeDelay = 8000; <br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;eaeGlobalSettings.enableCtrl = 'true'; <br/>
+					&lt;/script&gt;
+				</div>
+				<br/>
+				<span class="fc--green fw-bold">IMPORTANT:</span> while changing settings globally keep in mind that you
+				are using JS, so everything,
+				except numeric values, HAS TO BE IN QUOTES!
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+
+		<div class="sec-100 flex-center flex-reverse">
+			<div class="grid grid-1-3">
+				<img class="inline-logo" src="img/icons/unique_settings2.png"/>
+			</div>
+
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				<span class="fc--green fw-bold">Second, you can change the settings individually for each slider.</span>
+				In this case you add the <span class="ff-code">eae-settings=""</span> attribute to the <span
+					class="ff-code">eaeSlider</span> div.
+				Seperate multiple statements with a semicolon.
+				<br/><br/>
+				<div class="coderDiv ta-left no-wrap">
+					&lt;div class="eaeSlider" eae-settings="enableTouch:false;changeDelay:8000"&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage1.jpg" /&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage2.jpg" /&gt;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/sampleImage3.jpg" /&gt;<br/>
+					&lt;/div&gt;
+				</div>
+				<br/>
+				<span class="fc--green fw-bold">IMPORTANT:</span> while changing settings individually make sure to
+				AVOID USING QUOTES in any way!
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+
+</div>
+
+<div id="examples" class="section">
+
+	<div class="wrapper">
+
+		<div class="grid grid-3-3">
+			<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
+				examples
+			</h2>
+		</div>
+
+		<div class="sec-100 flex-end">
+			<div class="grid grid-1-3">
+				<div class="coderDiv ta-left no-wrap">
+					ctrlColor: rgba(5, 53, 66, 0.25);<br/>
+					descColor: #55C34D;<br/>
+					descFontSize:16px;<br/>
+					descPadding: 10;
+				</div>
+				<br/><br/>
+				<div class="eaeSlider example-slider" eae-settings="descColor:#55C34D;ctrlColor:rgba(5, 53, 66, 0.75)">
+					<img src="img/samples/1-1.jpeg" eae-desc="First Image."/>
+					<img src="img/samples/1-2.jpeg" eae-desc="Second Image."/>
+					<img src="img/samples/1-3.jpeg" eae-desc="Third Image."/>
+					<img src="img/samples/1-4.jpeg" eae-desc="Fourth Image."/>
+				</div>
+
+			</div>
+			<div class="grid grid-1-3 mo--hide">
+				<div class="coderDiv ta-left no-wrap">
+					changeDelay:0;<br/>
+					ctrlColor:rgba(255,255,255,0.75);<br/>
+					ctrlHeight:70px;<br/>
+					enableCtrl:true;
+				</div>
+				<br/><br/>
+				<div class="eaeSlider example-slider"
+					 eae-settings="changeDelay:0;enableCtrl:true;ctrlHeight:70px;ctrlColor:rgba(255,255,255,0.75)">
+					<img src="img/samples/2-1.jpeg"/>
+					<img src="img/samples/2-2.jpeg"/>
+					<img src="img/samples/2-3.jpeg"/>
+					<img src="img/samples/2-4.jpeg"/>
+				</div>
+
+			</div>
+			<div class="grid grid-1-3 mo--hide">
+				<div class="coderDiv ta-left no-wrap">
+					changeDelay: 8000;<br/>
+					changeDuration: 1000;<br/>
+					changeMode: fade;<br/>
+					imagePos: bottom left;
+				</div>
+				<br/><br/>
+				<div class="eaeSlider example-slider"
+					 eae-settings="imagePos: bottom left;changeDelay:8000;changeMode:fade;changeDuration:1000">
+					<img src="img/samples/3-1.jpeg"/>
+					<img src="img/samples/3-2.jpeg"/>
+					<img src="img/samples/3-3.jpeg"/>
+					<img src="img/samples/3-4.jpeg"/>
+				</div>
+
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+
+
+		<div class="sec-100 flex-end">
+			<div class="grid grid-1-3 mo--hide">
+				<div class="coderDiv ta-left no-wrap">
+					changeDelay: 6500;<br/>
+					changeDuration: 1200;<br/>
+					changeMode: fade;<br/>
+					enableTouch: false;
+				</div>
+				<br/><br/>
+				<div class="eaeSlider example-slider"
+					 eae-settings="changeMode:fade;enableTouch:false;ctrlColor:rgba(255,255,255,0.75);changeDelay:6500;changeDuration:1200">
+					<img src="img/samples/4-1.jpeg"/>
+					<img src="img/samples/4-2.jpeg"/>
+					<img src="img/samples/4-3.jpeg"/>
+					<img src="img/samples/4-4.jpeg"/>
+				</div>
+
+			</div>
+			<div class="grid grid-1-3">
+				<div class="coderDiv ta-left no-wrap">
+					bgColor: rgba(5, 53, 66, 0.25);<br/>
+					changeDelay: 12000;<br/>
+					changeMode: fade;<br/>
+					imageCrop: contain;
+				</div>
+				<br/><br/>
+				<div class="eaeSlider example-slider"
+					 eae-settings="imageCrop:contain;bgColor:rgba(5, 53, 66, 0.25);changeMode:fade;changeDelay:12000;enableTouch:false">
+					<img src="img/samples/5-1.jpeg"/>
+					<img src="img/samples/5-2.jpeg"/>
+					<img src="img/samples/5-3.jpeg"/>
+					<img src="img/samples/5-4.jpeg"/>
+				</div>
+
+			</div>
+			<div class="grid grid-1-3 mo--border-none">
+				<div class="coderDiv ta-left no-wrap">
+					changeDuration: 2000;<br/>
+					ctrlLeftUrl: img/icons/arrow-l.png;<br/>
+					ctrlRightUrl: img/icons/arrow-r.png;<br/>
+					enableCtrl: true;
+				</div>
+				<br/><br/>
+				<div class="eaeSlider example-slider"
+					 eae-settings="changeDuration:2000;enableCtrl:true;ctrlLeftUrl:img/icons/alw.png;ctrlRightUrl:img/icons/arw.png">
+					<img src="img/samples/6-1.jpeg"/>
+					<img src="img/samples/6-2.jpeg"/>
+					<img src="img/samples/6-3.jpeg"/>
+					<img src="img/samples/6-4.jpeg"/>
+				</div>
+
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+
+	</div>
+
+</div>
+
+<div id="download" class="section">
+
+	<div class="wrapper">
+
+		<div class="grid grid-3-3">
+			<h2 class="fw-normal fs--xxlarge ta-center fc--dblue1">
+				download
+			</h2>
+		</div>
+
+		<div class="sec-100 flex-center">
+			<div class="grid grid-1-3">
+				<a href="download/slider2.0.zip"><img class="inline-logo" src="img/icons/unique_settings.png"/></a>
+			</div>
+			<div class="grid grid-2-3 lh--30 ta-justify fs--medium">
+				I'm happy you made it to the download section. Just a few last things to mention...of course Slider2.0
+				is free to use both, non- and
+				commercial purposes. Nevertheless I put a lot of work and passion into making this fully responsive,
+				easy to use and minimalistic script.
+				So if you're going to use it just Tweet me <a target="_blank" href="https://twitter.com/theFaxemaxe">@theFaxemaxe</a>.
+				<br/>
+				I would really appreciate a small donation, so pay what you want and leave a short message.
+				<br/>
+				<p class="lh--60 ta-center fs--large"><a target="_blank" href="https://paypal.me/maxhoeffner/2.4">donate
+					now via paypal</a></p>
+				Allright, thank you for your time and have fun.
+				<br/>
+				<p class="lh--60 ta-center fs--large"><a href="download/slider2.0.zip">download script</a></p>
+				<br>
+				Having issues? Tweet me at <a target="_blank" href="https://twitter.com/theFaxemaxe">@theFaxemaxe</a> or
+				visit the <a target="_blank" href="https://github.com/faxemaxe/slider2.0">GitHub Repository</a>
+			</div>
+
+			<div style="clear: both;"></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div id="footer" class="section bg--green">
+	<div class="wrapper">
+		<div class="grid grid-3-3 ta-center lh--30">
+
+			<p>
+				<a href="https://saveandclose.io/impressum.html" target="_blank">Imprint</a>
+				|
+				<a href="https://saveandclose.io/privacypolicy.html" target="_blank">Privacy Policy</a>
+			</p>
+
+			<br/>
+
+			<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+				<img alt="Creative Commons Lizenzvertrag" style="border-width:0"
+					 src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+			</a>
+			<br/>
+			<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title"
+				  rel="dct:type">Slider2.0</span>
+			von
+			<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Max Höffner</span>
+			ist lizenziert unter einer<br/>
+			<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+				Namensnennung 4.0 International Lizenz</a>.
+		</div>
+	</div>
+</div>
+
+
+</body>
+
+<footer></footer>
 
 </html>
