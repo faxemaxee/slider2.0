@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Slider2.0 </title>
+		<meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta charset="utf-8">
+		
+		<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+		<script src="../dist/slider2.0.min.js"></script>
+
+		<script type="text/javascript">
+			eaeGlobalSettings.changeDuration = 2500;
+			eaeGlobalSettings.changeDelay = 5000;
+			eaeGlobalSettings.changeMode = 'fade';
+			eaeGlobalSettings.imageCrop = 'contain';
+			eaeGlobalSettings.imagePos = 'bottom center';
+			eaeGlobalSettings.descColor = 'red';
+			eaeGlobalSettings.descFontSize = '15px';
+			eaeGlobalSettings.descPadding = 30;
+			eaeGlobalSettings.descWidth = 'auto';
+			eaeGlobalSettings.enableCtrl = false;
+			eaeGlobalSettings.ctrlColor = 'rgba(5, 135, 205, 0.5)';
+			eaeGlobalSettings.ctrlWidth = '30px';
+			eaeGlobalSettings.ctrlHeight = '60px';
+			eaeGlobalSettings.ctrlLeftUrl = 'img/arrow_left_black.png';
+			eaeGlobalSettings.ctrlRightUrl = 'img/arrow_right_black.png';
+			eaeGlobalSettings.enableTouch = false;
+			eaeGlobalSettings.bgColor = 'green';
+		</script>
+		
+		<link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8">
+	</head>
+
+	<body>
+		
+		<div class="wrapper1">
+			<h1>Slider2.0</h1>
+			
+			<div class="eaeSlider" eae-settings="enableTouch:;ctrlHeight:80px;ctrlWidth:50px;changeDuration:1000;changeDelay:4000;changeMode:slide;imageCrop:cover;imagePos:top center;descColor:#696969;descFontSize:24px;descPadding:20;descWidth:100%;enableCtrl:true;ctrlColor:rgba(255,255,255,0.75)" id="test1">
+
+				<img src="img/5.png" eae-desc="Nur für dich Marvin" eae-link="http://google.com" />
+				<img src="img/3.png" eae-desc="Alles geht hier." eae-link="http://google.com" />
+				<img src="img/1.png" eae-desc="This works fine" eae-link="http://google.com" />
+				<img src="img/4.png" eae-desc="Blabliblu" eae-link="http://google.com" />
+				<img src="img/2.png" eae-desc="Check das!" eae-link="http://google.com" />
+
+			</div>
+
+			<div class="eaeSlider" eae-settings="bgColor:red;imagePos:left center" id="test2">
+
+				<img src="img/1.png" eae-link="" />
+				<img src="img/2.png" eae-desc="This is a test!"/>
+				<img src="img/3.png" eae-link="" />
+				<img src="img/4.png" eae-link="http://google.com" />
+
+			</div>
+
+		</div>
+		
+	</body>
+
+	<footer></footer>
+
+</html>

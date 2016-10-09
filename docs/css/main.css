@@ -1,0 +1,381 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* =Clearfix (all browsers)
+--------------------------------*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/* IE6 */
+* html .clearfix {
+  height: 1%; }
+
+/* IE7 */
+*:first-child + html .clearfix {
+  min-height: 1px; }
+
+.fs--small {
+  font-size: 12px; }
+
+.fs--medium {
+  font-size: 16px; }
+
+.fs--large {
+  font-size: 20px; }
+
+.fs--xlarge {
+  font-size: 24px; }
+
+.fs--xxlarge {
+  font-size: 30px; }
+
+.fs--xxxlarge {
+  font-size: 55px; }
+
+.fs--mxlarge {
+  font-size: 150px; }
+
+.bg--lblue {
+  background-color: #DFFBFF; }
+
+.fc--lblue {
+  color: #DFFBFF; }
+
+.bg--dblue1 {
+  background-color: #074354; }
+
+.fc--dblue1 {
+  color: #074354; }
+
+.bg--dblue2 {
+  background-color: #053542; }
+
+.fc--dblue2 {
+  color: #053542; }
+
+.bg--dblue3 {
+  background-color: #02222B; }
+
+.fc--dblue3 {
+  color: #02222B; }
+
+.bg--green {
+  background-color: #55C34D; }
+
+.fc--green {
+  color: #55C34D; }
+
+.spacer--50 {
+  padding-top: 50px; }
+
+.spacer--40 {
+  padding-top: 40px; }
+
+.spacer--30 {
+  padding-top: 30px; }
+
+.spacer--20 {
+  padding-top: 20px; }
+
+.spacer--10 {
+  padding-top: 10px; }
+
+.vcenter-parent {
+  position: relative; }
+
+.vcenter-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 100%; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  color: #053542; }
+
+.wrapper {
+  width: 990px;
+  margin: 0px auto; }
+
+.grid {
+  padding: 50px 0px; }
+
+.grid-1-3 {
+  width: calc(100% / 3 - 20px);
+  margin: 0px 10px;
+  float: left; }
+  .grid-1-3 img {
+    width: 100%; }
+
+.grid-2-3 {
+  width: calc(100% / 3 * 2 - 20px);
+  margin: 0px 10px;
+  float: left; }
+
+.grid-3-3 {
+  width: calc(100% - 20px);
+  margin: 0px 10px; }
+
+.section {
+  border-top: 10px solid #55C34D; }
+  .section a {
+    color: #55C34D;
+    font-weight: 500;
+    text-decoration: none; }
+
+.sec-100 {
+  width: 100%; }
+
+.sec-100-smallgrid {
+  border-bottom: 1px solid #074354; }
+  .sec-100-smallgrid .grid {
+    padding: 15px 0px; }
+
+.ta-center {
+  text-align: center; }
+
+.ta-justify {
+  text-align: justify; }
+
+.ta-left {
+  text-align: left; }
+
+.fw-light {
+  font-weight: 300; }
+
+.fw-normal {
+  font-weight: 400; }
+
+.fw-bold {
+  font-weight: 500; }
+
+.ff-code {
+  font-family: 'Source Code Pro'; }
+
+.lh--30 {
+  line-height: 30px; }
+
+.lh--60 {
+  line-height: 60px; }
+
+.h-100p {
+  height: 100%; }
+
+.flex-center {
+  display: flex;
+  align-items: center; }
+
+.flex-reverse {
+  display: flex;
+  flex-direction: row-reverse; }
+
+.flex-jus {
+  display: flex;
+  justify-content: center; }
+
+.flex-end {
+  display: flex;
+  align-items: flex-end; }
+
+.flex-base {
+  display: flex;
+  align-items: baseline; }
+
+.fl-left {
+  float: left; }
+
+.fl-right {
+  float: right; }
+
+.no-wrap {
+  white-space: nowrap; }
+
+/*
+ * Animation configurations ( duration and fill mode )
+*/
+.animated {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite; }
+
+/*
+ * Animation for webkit
+*/
+@-webkit-keyframes bounce {
+  0%, 8%, 20%, 32%, 40%, 100% {
+    -webkit-transform: translateY(0); }
+  16% {
+    -webkit-transform: translateY(-30px); }
+  24% {
+    -webkit-transform: translateY(-15px); } }
+
+@keyframes bounce {
+  0%, 4%, 10%, 16%, 20%, 100% {
+    transform: translateY(0); }
+  8% {
+    transform: translateY(-30px); }
+  12% {
+    transform: translateY(-15px); } }
+
+/*
+ * Adding the animation to our element
+*/
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce; }
+
+.headerDiv {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  top: 0px;
+  left: 0px; }
+  .headerDiv .headerContent {
+    height: 100%;
+    width: 100%;
+    position: relative; }
+    .headerDiv .headerContent img {
+      width: 250px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%); }
+    .headerDiv .headerContent .goDown {
+      height: 60px;
+      width: 60px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-image: url("../img/icons/adown.png");
+      position: absolute;
+      left: calc(50% - 30px);
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      bottom: 75px; }
+
+#headingSlider {
+  width: 100%;
+  height: 100vh; }
+
+.inline-logo {
+  width: 90%; }
+
+.coderDiv {
+  font-family: 'Source Code Pro';
+  color: #074354;
+  font-size: 14px;
+  overflow-x: scroll;
+  line-height: 20px; }
+
+#default .coderDiv ul {
+  width: 750px; }
+  #default .coderDiv ul li {
+    width: 250px;
+    float: left; }
+
+#examples .example-slider {
+  height: 200px; }
+
+#footer a {
+  color: #053542; }
+
+@media (max-width: 1010px) {
+  .wrapper {
+    width: calc(100% - 40px); } }
+
+@media (max-width: 767px) {
+  .grid {
+    width: 100%;
+    margin: 0px;
+    float: none;
+    padding: 25px 0px; }
+  .sec-100, .sec-100-smallgrid {
+    display: block; }
+  .grid-1-3 img {
+    max-width: 200px;
+    margin: 0px auto;
+    display: block; }
+  .grid-1-3 .fs--mxlarge {
+    font-size: 100px; }
+  #default .grid-1-3 {
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: calc(100% - 10px) center;
+    background-image: url("../img/icons/smalladown.png"); }
+  #default .smallopen {
+    background-image: url("../img/icons/smallaup.png"); }
+  #examples .wrapper {
+    width: 320px; }
+    #examples .wrapper .mo--hide {
+      display: none; }
+    #examples .wrapper .grid-1-3 {
+      border-bottom: 1px solid #053542; }
+    #examples .wrapper .mo--border-none {
+      border: none; } }

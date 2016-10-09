@@ -1,0 +1,424 @@
+@import 'reset';
+
+
+
+//COLORS & FONTS
+
+$lblue: #DFFBFF;
+$dblue1:	#074354;
+$dblue2:	#053542;
+$dblue3:	#02222B;
+$green:		#55C34D;
+
+$fontsizes: (
+	small: 12px,
+	medium: 16px,
+	large: 20px,
+	xlarge: 24px,
+	xxlarge: 30px,
+	xxxlarge: 55px,
+	mxlarge: 150px
+);
+
+@each $fontsizes, $fontsize in $fontsizes {
+	
+	//font-size--px
+	.fs--#{$fontsizes} {
+		font-size: $fontsize;
+	}
+}
+
+$colors: (
+	lblue: $lblue,
+	dblue1: $dblue1,
+	dblue2: $dblue2,
+	dblue3: $dblue3,
+	green: $green
+);
+
+@each $colors, $color in $colors {
+	
+	//background color
+	.bg--#{$colors} {
+		background-color: $color;
+	}
+	
+	//font-color
+	.fc--#{$colors} {
+		color: $color;
+	}
+}
+
+//SPACER
+
+$types: 50;
+@while $types > 0 {
+  .spacer--#{$types} {
+	   padding-top: $types + px;
+  }
+  $types: $types - 10;
+}
+
+//center vertically
+
+.vcenter-parent {
+	position: relative;
+}
+.vcenter-child {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	width: 100%;
+}
+
+//TOOLBOX
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	color: $dblue2;
+}
+
+.wrapper {
+	width: 990px;
+	margin: 0px auto;
+}
+
+.grid {
+	padding: 50px 0px;
+}
+
+.grid-1-3 {
+	width: calc(100% / 3 - 20px);
+	margin: 0px 10px;
+	float: left;
+	
+	img {
+		width: 100%;
+	}
+}
+.grid-2-3 {
+	width: calc(100% / 3 * 2 - 20px);
+	margin: 0px 10px;
+	float: left;
+}
+.grid-3-3 {
+	width: calc(100% - 20px);
+	margin: 0px 10px;
+}
+.section {
+	border-top: 10px solid $green;
+	
+	a {
+		color: $green;
+		font-weight: 500;
+		text-decoration: none;
+	}
+}
+
+.sec-100 {
+	width: 100%;
+}
+.sec-100-smallgrid {
+	border-bottom: 1px solid $dblue1;
+	
+	.grid {
+		padding: 15px 0px;
+	}
+}
+
+.ta-center {
+	text-align: center;
+}
+.ta-justify {
+	text-align: justify;
+}
+.ta-left {
+	text-align: left;
+}
+
+.fw-light {
+	font-weight: 300;
+}
+.fw-normal {
+	font-weight: 400;
+}
+.fw-bold {
+	font-weight: 500;
+}
+
+.ff-code {
+	font-family: 'Source Code Pro';
+}
+
+.lh--30 {
+	line-height: 30px;
+}
+.lh--60 {
+	line-height: 60px;
+}
+
+.h-100p {
+	height: 100%;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+}
+.flex-reverse {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.flex-jus {
+	display: flex;
+	justify-content: center;
+}
+.flex-end {
+	display: flex;
+	align-items: flex-end;
+}
+.flex-base {
+	display: flex;
+	align-items: baseline;
+}
+
+.fl-left {
+	float: left;
+}
+.fl-right {
+	float: right;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+
+
+
+/*
+ * Animation configurations ( duration and fill mode )
+*/
+.animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+/*
+ * Animation for webkit
+*/
+@-webkit-keyframes bounce {
+    0%, 8%, 20%, 32%, 40%, 100% {-webkit-transform: translateY(0);}
+    16% {-webkit-transform: translateY(-30px);}
+    24% {-webkit-transform: translateY(-15px);}
+} 
+ 
+@keyframes bounce {
+    0%, 4%, 10%, 16%, 20%, 100% {transform: translateY(0);}
+    8% {transform: translateY(-30px);}
+    12% {transform: translateY(-15px);}
+} 
+ 
+/*
+ * Adding the animation to our element
+*/
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+
+
+
+
+
+
+
+
+
+
+.headerDiv {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.35);
+	text-align: center;
+	
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	
+	top:0px;
+	left: 0px;
+	
+	.headerContent {
+		height: 100%;
+		width: 100%;
+		
+		position: relative;
+		
+		img {
+			width: 250px;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+		}
+		
+		.goDown {
+			height: 60px;
+			width: 60px;
+			display: block;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			background-image: url('../img/icons/adown.png');
+			
+			position: absolute;
+			left: calc(50% - 30px);
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			bottom: 75px;
+		}
+	}
+}
+
+
+
+
+#headingSlider {
+	width: 100%;
+	height: 100vh;
+}
+
+
+.inline-logo {
+	width: 90%;
+}
+
+.setup-line {
+}
+
+.coderDiv {
+	font-family: 'Source Code Pro';
+	//background-color: $dblue2;
+	color: $dblue1;
+	//white-space: nowrap;
+	font-size: 14px;
+	overflow-x: scroll;
+	line-height: 20px;
+}
+
+
+#default {
+	
+	.coderDiv {
+		ul {
+			width: 750px;
+			li {
+				width: 250px;
+				float: left;
+			}
+		}
+	}
+}
+
+
+#examples {
+	
+	.example-slider {
+		height: 200px;
+	}
+}
+
+
+#footer {
+	a {
+		color: $dblue2;
+	}
+}
+
+
+//RESPONSIVE
+
+
+@media(max-width:1010px) {
+	
+	.wrapper {
+		width: calc(100% - 40px);
+	}
+}
+
+@media(max-width:767px) {
+	.grid {
+		width: 100%;
+		margin: 0px;
+		float: none;
+		padding: 25px 0px;
+	}
+	
+	.sec-100, .sec-100-smallgrid {
+		display: block;
+	}
+	
+	.grid-1-3 {
+		img {
+			max-width: 200px;
+			margin: 0px auto;
+			display: block;
+		}
+		.fs--mxlarge {
+			font-size: 100px;
+		}
+	}
+	
+	#default {
+		.grid-1-3 {
+			background-repeat: no-repeat;
+			background-size: 16px;
+			background-position: calc(100% - 10px) center;
+			background-image: url('../img/icons/smalladown.png');
+		}
+		
+		.smallopen {
+			background-image: url('../img/icons/smallaup.png');
+		}
+	}
+	
+	#examples {
+		.wrapper {
+			width: 320px;
+			
+			.mo--hide {
+				display: none;
+			}
+			
+			.grid-1-3 {
+				border-bottom: 1px solid $dblue2;
+			}
+			.mo--border-none {
+				border: none;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,33 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Questrial', sans-serif; }
+
+.wrapper1 {
+  width: 960px;
+  margin: 0px auto; }
+  .wrapper1 h1 {
+    padding: 15px 0px;
+    text-align: center; }
+
+#test1 {
+  width: 100%;
+  height: 400px;
+  margin: 0px auto; }
+
+#test2 {
+  width: 100%;
+  height: 400px;
+  margin: 50px auto; }
+
+@media (max-width: 980px) {
+  .wrapper1 {
+    width: calc(100% - 40px);
+    padding: 0px 20px; }
+
+  #test1  {
+    width: 100%; }
+
+  #test2  {
+    width: 100% !important; }
+ }
