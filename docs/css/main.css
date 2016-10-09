@@ -79,10 +79,10 @@ table {
   font-size: 150px; }
 
 .bg--lblue {
-  background-color: #DFFBFF; }
+  background-color: #e1e4ed; }
 
 .fc--lblue {
-  color: #DFFBFF; }
+  color: #e1e4ed; }
 
 .bg--dblue1 {
   background-color: #074354; }
@@ -263,7 +263,6 @@ html, body {
     -webkit-transform: translateY(-30px); }
   24% {
     -webkit-transform: translateY(-15px); } }
-
 @keyframes bounce {
   0%, 4%, 10%, 16%, 20%, 100% {
     transform: translateY(0); }
@@ -271,7 +270,6 @@ html, body {
     transform: translateY(-30px); }
   12% {
     transform: translateY(-15px); } }
-
 /*
  * Adding the animation to our element
 */
@@ -349,21 +347,23 @@ html, body {
 @media (max-width: 1010px) {
   .wrapper {
     width: calc(100% - 40px); } }
-
 @media (max-width: 767px) {
   .grid {
     width: 100%;
     margin: 0px;
     float: none;
     padding: 25px 0px; }
+
   .sec-100, .sec-100-smallgrid {
     display: block; }
+
   .grid-1-3 img {
     max-width: 200px;
     margin: 0px auto;
     display: block; }
   .grid-1-3 .fs--mxlarge {
     font-size: 100px; }
+
   #default .grid-1-3 {
     background-repeat: no-repeat;
     background-size: 16px;
@@ -371,6 +371,7 @@ html, body {
     background-image: url("../img/icons/smalladown.png"); }
   #default .smallopen {
     background-image: url("../img/icons/smallaup.png"); }
+
   #examples .wrapper {
     width: 320px; }
     #examples .wrapper .mo--hide {
@@ -379,3 +380,5 @@ html, body {
       border-bottom: 1px solid #053542; }
     #examples .wrapper .mo--border-none {
       border: none; } }
+
+/*# sourceMappingURL=main.css.map */
