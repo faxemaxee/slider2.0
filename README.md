@@ -6,4 +6,4 @@ a simple slider script
 * ...
 
 # Documentation
-<a href="https://saveandclose.io/sandbox/slider2.0/" target="_blank" title="Slider2.0 Documentation">Slider2.0 Documentation</a>
+<a href="https://honestweb.io/sandbox/slider2.0/" target="_blank" title="Slider2.0 Documentation">Slider2.0 Documentation</a>
