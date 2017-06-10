@@ -248,7 +248,8 @@ var eaeBuildSlides = function(linkTemp, imgTemp, descTemp, appendImgTo, uqid, te
 			'background-position':eaeSettings.imagePos,
 			'background-size':eaeSettings.imageCrop,
 			'background-repeat':'no-repeat',
-			'text-decoration':'none'
+			'text-decoration':'none',
+			'z-index': i < 1 ? 2 : 1
 		});
 	});
 	
